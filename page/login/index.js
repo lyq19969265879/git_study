@@ -13,6 +13,10 @@ document.querySelector('.btn').addEventListener('click',()=>{
     myAlert(false,'手机号的长度要11位')
     return 
   }
+  if(data.code.length !== 6){
+    myAlert(false,'验证码长度要6位')
+    return
+  }
   console.log(data)
   //1.3基于 axios 调用验证码登录接口
   axios({
